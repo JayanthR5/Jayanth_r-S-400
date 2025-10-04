@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Management - Welcome</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#3b82f6",
+            secondary: "#ffffff",
+            accent: "#f59e0b" /* gold for umbrella decoration */
+          },
+          keyframes: {
+            logoAnim: {
+              '0%': { transform: 'scale(0) rotate(0deg)', opacity: '0' },
+              '60%': { transform: 'scale(1.2) rotate(10deg)', opacity: '1' },
+              '100%': { transform: 'scale(1) rotate(0deg)' }
+            },
+            fadeIn: {
+              '0%': { opacity: 0, transform: 'translateY(20px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' }
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-15px)' }
+            },
+            fadeOut: {
+              '0%': { opacity: 1 },
+              '100%': { opacity: 0 }
+            }
+          },
+          animation: {
+            logoAnim: 'logoAnim 2s ease-out forwards',
+            fadeIn: 'fadeIn 1.5s ease-out forwards',
+            float: 'float 6s ease-in-out infinite',
+            fadeOut: 'fadeOut 1s ease-in forwards'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.2;
+      animation: float 6s ease-in-out infinite;
+    }
+    .main-content { opacity: 0; transition: opacity 1s; }
+  </style>
+</head>
+<body class="bg-secondary text-primary font-sans min-h-screen flex flex-col relative overflow-hidden">
+
+  <!-- Floating Decorative Circles -->
+  <div class="circle bg-primary w-16 h-16 top-10 left-10 animate-float"></div>
+  <div class="circle bg-primary w-24 h-24 bottom-20 right-20 animate-float"></div>
+  <div class="circle bg-primary w-12 h-12 top-1/2 left-1/3 animate-float"></div>
+  <div class="circle bg-primary w-20 h-20 top-2/3 right-1/4 animate-float"></div>
+
+  <!-- Center Creative Wedding Logo -->
+  <div class="flex flex-col items-center justify-center min-h-screen z-10 absolute w-full" id="logoContainer">
+    <div class="flex flex-col items-center animate-logoAnim">
+      <!-- Circle Background -->
+      <div class="bg-primary w-36 h-36 rounded-full flex items-center justify-center shadow-lg relative">
+        <!-- Decorative Wedding Umbrella SVG -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-24 h-24" viewBox="0 0 64 64" fill="none" stroke="white" stroke-width="2">
+          <!-- Umbrella Top -->
+          <path d="M2 32 C12 12, 52 12, 62 32 Q48 28, 32 32 Q16 28, 2 32" fill="#f59e0b"/>
+          <!-- Umbrella Tassels -->
+          <line x1="8" y1="32" x2="8" y2="36" stroke="#fff" stroke-width="1.5"/>
+          <line x1="16" y1="32" x2="16" y2="36" stroke="#fff" stroke-width="1.5"/>
+          <line x1="24" y1="32" x2="24" y2="36" stroke="#fff" stroke-width="1.5"/>
+          <line x1="32" y1="32" x2="32" y2="36" stroke="#fff" stroke-width="1.5"/>
+          <line x1="40" y1="32" x2="40" y2="36" stroke="#fff" stroke-width="1.5"/>
+          <line x1="48" y1="32" x2="48" y2="36" stroke="#fff" stroke-width="1.5"/>
+          <line x1="56" y1="32" x2="56" y2="36" stroke="#fff" stroke-width="1.5"/>
+          <!-- Umbrella Stick -->
+          <line x1="32" y1="32" x2="32" y2="52" stroke="#fff" stroke-width="2"/>
+        </svg>
+      </div>
+      <!-- Event Text -->
+      <h1 class="text-3xl font-extrabold text-primary mt-4 tracking-wider">EVENT</h1>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content flex-grow flex flex-col items-center justify-center text-center p-6 relative z-10" id="mainContent">
+    
+    <!-- Navigation Bar -->
+    <header class="bg-primary text-white shadow-md w-full">
+      <div class="container mx-auto flex justify-between items-center p-4">
+        <h1 class="text-lg font-bold">Event Management</h1>
+        <nav>
+          <ul class="flex space-x-6">
+            <li><a href="login.html" class="hover:scale-110 transition-transform duration-300">Login</a></li>
+            <li><a href="dashboard.html" class="hover:scale-110 transition-transform duration-300">Dashboard</a></li>
+            <li><a href="vendors.html" class="hover:scale-110 transition-transform duration-300">Vendors</a></li>
+            <li><a href="agenda.html" class="hover:scale-110 transition-transform duration-300">Agenda</a></li>
+            <li><a href="analytics.html" class="hover:scale-110 transition-transform duration-300">Analytics</a></li>
+            <li><a href="notification.html" class="hover:scale-110 transition-transform duration-300">Notifications</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Welcome Section -->
+    <div class="animate-fadeIn mt-6">
+      <h2 class="text-3xl font-bold text-primary mb-4">🎉 Welcome to Event Management 🎉</h2>
+      <p class="text-lg text-gray-600">Manage your events with ease – login and explore the dashboard.</p>
+    </div>
+    
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white text-center py-3 relative z-10">
+    <p class="text-sm">&copy; 2025 Event Management System</p>
+  </footer>
+
+  <script>
+    const logoContainer = document.getElementById('logoContainer');
+    const mainContent = document.getElementById('mainContent');
+
+    // Hide logo after 5 seconds and show main content
+    setTimeout(() => {
+      logoContainer.classList.add('animate-fadeOut');
+      setTimeout(() => {
+        logoContainer.style.display = 'none';
+        mainContent.style.opacity = '1';
+      }, 1000);
+    }, 5000);
+  </script>
+
+</body>
+</html>

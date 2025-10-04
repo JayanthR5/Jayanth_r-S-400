@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Event Platform Login</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#137fec",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101922",
+          },
+          fontFamily: {
+            "display": ["Inter"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .neumorphic-shadow-light {
+      box-shadow: 6px 6px 12px #d5d6d8, -6px -6px 12px #ffffff;
+    }
+    .neumorphic-shadow-dark {
+      box-shadow: 6px 6px 12px #0c1218, -6px -6px 12px #14202c;
+    }
+    .neumorphic-inset-light {
+      box-shadow: inset 6px 6px 12px #d5d6d8, inset -6px -6px 12px #ffffff;
+    }
+    .neumorphic-inset-dark {
+      box-shadow: inset 6px 6px 12px #0c1218, inset -6px -6px 12px #14202c;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="flex flex-col min-h-screen">
+<header class="flex justify-end p-4">
+<button class="w-12 h-12 flex items-center justify-center rounded-full bg-background-light dark:bg-background-dark text-gray-500 dark:text-gray-400 neumorphic-shadow-light dark:neumorphic-shadow-dark">
+<svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M140,180a12,12,0,1,1-12-12A12,12,0,0,1,140,180ZM128,72c-22.06,0-40,16.15-40,36v4a8,8,0,0,0,16,0v-4c0-11,10.77-20,24-20s24,9,24,20-10.77,20-24,20a8,8,0,0,0-8,8v8a8,8,0,0,0,16,0v-.72c18.24-3.35,32-17.9,32-35.28C168,88.15,150.06,72,128,72Zm104,56A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"></path>
+</svg>
+</button>
+</header>
+<main class="flex-grow flex flex-col items-center justify-center px-4 -mt-16">
+<div class="w-full max-w-sm text-center">
+<h1 class="text-3xl font-bold text-gray-900 dark:text-white">Welcome back</h1>
+<p class="mt-2 text-gray-600 dark:text-gray-400">Sign in to continue your event journey</p>
+</div>
+<form class="w-full max-w-sm mt-8 space-y-6">
+<div class="relative">
+<input class="w-full h-14 pl-5 pr-5 py-3 bg-background-light dark:bg-background-dark rounded-xl text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none neumorphic-inset-light dark:neumorphic-inset-dark" placeholder="Email" type="email"/>
+</div>
+<div class="relative">
+<input class="w-full h-14 pl-5 pr-5 py-3 bg-background-light dark:bg-background-dark rounded-xl text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none neumorphic-inset-light dark:neumorphic-inset-dark" placeholder="Password" type="password"/>
+</div>
+<div class="text-right">
+<a class="text-sm text-primary hover:underline" href="#">Forgot password?</a>
+</div>
+<div>
+<button class="w-full h-14 flex items-center justify-center rounded-xl bg-primary text-white font-bold text-lg neumorphic-shadow-light dark:neumorphic-shadow-dark hover:opacity-90 transition-opacity" type="submit">
+            Sign In
+          </button>
+</div>
+</form>
+<p class="mt-8 text-center text-sm text-gray-600 dark:text-gray-400">
+        Don't have an account? <a class="font-medium text-primary hover:underline" href="#">Sign up</a>
+</p>
+</main>
+<footer class="sticky bottom-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-t border-gray-200 dark:border-gray-800">
+<nav class="flex justify-around items-center h-20 px-4">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<svg class="bg-primary/20 rounded-full p-1" fill="currentColor" height="28" viewBox="0 0 256 256" width="28" xmlns="http://www.w3.org/2000/svg"><path d="M224,115.55V208a16,16,0,0,1-16,16H168a16,16,0,0,1-16-16V168a8,8,0,0,0-8-8H112a8,8,0,0,0-8,8v40a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V115.55a16,16,0,0,1,5.17-11.78l80-75.48.11-.11a16,16,0,0,1,21.53,0,1.14,1.14,0,0,0,.11.11l80,75.48A16,16,0,0,1,224,115.55Z"></path></svg>
+<span class="text-xs font-bold">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="#">
+<svg fill="currentColor" height="28" viewBox="0 0 256 256" width="28" xmlns="http://www.w3.org/2000/svg"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path></svg>
+<span class="text-xs">Search</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="#">
+<svg fill="currentColor" height="28" viewBox="0 0 256 256" width="28" xmlns="http://www.w3.org/2000/svg"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM208,208H48V96H208V208Z"></path></svg>
+<span class="text-xs">Events</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400" href="#">
+<svg fill="currentColor" height="28" viewBox="0 0 256 256" width="28" xmlns="http://www.w3.org/2000/svg"><path d="M230.92,212c-15.23-26.33-38.7-45.21-66.09-54.16a72,72,0,1,0-73.66,0C63.78,166.78,40.31,185.66,25.08,212a8,8,0,1,0,13.85,8c18.84-32.56,52.14-52,89.07-52s70.23,19.44,89.07,52a8,8,0,1,0,13.85-8ZM72,96a56,56,0,1,1,56,56A56.06,56.06,0,0,1,72,96Z"></path></svg>
+<span class="text-xs">Profile</span>
+</a>
+</nav>
+</footer>
+</div>
+
+</body></html>

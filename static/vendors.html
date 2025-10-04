@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vendor &amp; Sponsor Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .neumorphic-shadow {
+            box-shadow: 6px 6px 12px #e0e2e5, -6px -6px 12px #ffffff;
+        }
+        .dark .neumorphic-shadow {
+            box-shadow: 6px 6px 12px #0c1217, -6px -6px 12px #14202d;
+        }
+        .neumorphic-inset-shadow {
+            box-shadow: inset 6px 6px 12px #e0e2e5, inset -6px -6px 12px #ffffff;
+        }
+        .dark .neumorphic-inset-shadow {
+             box-shadow: inset 6px 6px 12px #0c1217, inset -6px -6px 12px #14202d;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full flex-col justify-between overflow-x-hidden">
+<div class="flex-grow">
+<header class="flex items-center justify-between p-4 bg-background-light dark:bg-background-dark sticky top-0 z-10">
+<button class="flex items-center justify-center h-10 w-10 rounded-full bg-background-light dark:bg-background-dark neumorphic-shadow text-slate-800 dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="text-xl font-bold text-slate-800 dark:text-white">Portal</h1>
+<div class="h-10 w-10"></div>
+</header>
+<main class="p-4">
+<section class="mb-8">
+<h2 class="text-2xl font-bold text-slate-800 dark:text-white mb-4">Vendor Tasks</h2>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-4 rounded-lg bg-background-light dark:bg-background-dark neumorphic-shadow">
+<div class="flex-grow">
+<p class="font-semibold text-slate-800 dark:text-white">Submit Vendor Booth Design</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">Due: July 15 - <span class="font-medium text-amber-500">Pending</span></p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 dark:bg-slate-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-slate-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between p-4 rounded-lg bg-background-light dark:bg-background-dark neumorphic-shadow">
+<div class="flex-grow">
+<p class="font-semibold text-slate-800 dark:text-white">Confirm Staffing for Event</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">Due: July 20 - <span class="font-medium text-green-500">Confirmed</span></p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 dark:bg-slate-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-slate-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between p-4 rounded-lg bg-background-light dark:bg-background-dark neumorphic-shadow">
+<div class="flex-grow">
+<p class="font-semibold text-slate-800 dark:text-white">Finalize Product Samples</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">Due: July 25 - <span class="font-medium text-amber-500">Pending</span></p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 dark:bg-slate-700 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-slate-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-2xl font-bold text-slate-800 dark:text-white mb-4">Sponsor Logo</h2>
+<div class="rounded-xl bg-background-light dark:bg-background-dark neumorphic-shadow p-4">
+<div class="flex flex-col items-center">
+<p class="text-lg font-semibold text-slate-800 dark:text-white mb-2">Attendee App Preview</p>
+<div class="w-full bg-slate-200 dark:bg-slate-800/50 rounded-lg p-4 flex items-center justify-center mb-4 neumorphic-inset-shadow">
+<div class="w-24 h-24 bg-center bg-contain bg-no-repeat rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBnincGink4cQeKxfwekKCokv51wQxfUOrpyFiBRnmQs7RbPSo3KCDuGoYLuPVX-sEOYVLZEXkGq1t2bba3HgR7nuWhHeamkp9H9NNBglBUy2yOZ_WTLwlOHDk8l7CTN29xcrRnM1WzKlZ9w9LEyZg7p9CS5MqRilWvP64tkpXPsWjKy3dbpDv-yxxYK3WEAwusKYMG0LReXj9T8wVzLiVb1ZrjMeTC4VAxuod0hOn4WtNBS2aGYrLXzD6Q1UIpqhRwLNbrjkUlTn78");'></div>
+</div>
+<div class="text-center mb-4">
+<p class="text-base text-slate-600 dark:text-slate-300">This is how your logo will appear.</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">Recommended size: 500x500px</p>
+</div>
+<button class="w-full bg-primary text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:ring-4 focus:ring-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/40">
+                                Upload New Logo
+                            </button>
+</div>
+</div>
+</section>
+</main>
+</div>
+<footer class="sticky bottom-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-t border-slate-200 dark:border-slate-800">
+<nav class="flex justify-around items-center h-20 px-2 pb-4">
+<a class="flex flex-col items-center justify-center gap-1 w-full text-primary" href="#">
+<div class="flex items-center justify-center h-8 w-12 rounded-full bg-primary/10">
+<span class="material-symbols-outlined">task_alt</span>
+</div>
+<span class="text-xs font-bold">Tasks</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 w-full text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">groups</span>
+<span class="text-xs font-medium">Sponsors</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 w-full text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs font-medium">Profile</span>
+</a>
+</nav>
+</footer>
+</div>
+
+</body></html>

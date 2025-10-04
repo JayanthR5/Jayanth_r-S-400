@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Event Agenda</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .neumorphic-shadow {
+            box-shadow: 6px 6px 12px #e3e4e5, -6px -6px 12px #ffffff;
+        }
+        .dark .neumorphic-shadow {
+            box-shadow: 6px 6px 12px #0c1218, -6px -6px 12px #14202c;
+        }
+        .timeline-line {
+            background: linear-gradient(to bottom, transparent 0%, #d1d5db 5%, #d1d5db 95%, transparent 100%);
+        }
+        .dark .timeline-line {
+            background: linear-gradient(to bottom, transparent 0%, #374151 5%, #374151 95%, transparent 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="max-w-md mx-auto min-h-screen flex flex-col">
+<header class="p-4 flex items-center justify-between">
+<button class="p-2 rounded-full bg-primary/10 dark:bg-primary/20 text-primary">
+<span class="material-symbols-outlined">
+                    arrow_back
+                </span>
+</button>
+<h1 class="text-xl font-bold text-gray-900 dark:text-white">Agenda</h1>
+<div class="w-10 h-10"></div>
+</header>
+<main class="flex-grow px-4 pb-24">
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white my-4">Today</h2>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-background-light dark:bg-background-dark neumorphic-shadow flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">event_available</span>
+</div>
+<div class="w-px flex-grow timeline-line"></div>
+</div>
+<div class="pb-6 w-full">
+<div class="bg-background-light dark:bg-background-dark p-4 rounded-xl neumorphic-shadow">
+<p class="font-bold text-lg text-gray-900 dark:text-white">Registration</p>
+<p class="text-primary font-medium">8:00 AM - 9:00 AM</p>
+</div>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-background-light dark:bg-background-dark neumorphic-shadow flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">campaign</span>
+</div>
+<div class="w-px flex-grow timeline-line"></div>
+</div>
+<div class="pb-6 w-full">
+<div class="bg-background-light dark:bg-background-dark p-4 rounded-xl neumorphic-shadow">
+<p class="font-bold text-lg text-gray-900 dark:text-white">Opening Keynote</p>
+<p class="text-primary font-medium">9:00 AM - 10:30 AM</p>
+</div>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-background-light dark:bg-background-dark neumorphic-shadow flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">restaurant</span>
+</div>
+<div class="w-px flex-grow timeline-line"></div>
+</div>
+<div class="w-full">
+<div class="bg-background-light dark:bg-background-dark p-4 rounded-xl neumorphic-shadow">
+<p class="font-bold text-lg text-gray-900 dark:text-white">Networking Lunch</p>
+<p class="text-primary font-medium">12:00 PM - 1:00 PM</p>
+</div>
+</div>
+</div>
+</div>
+<h2 class="text-2xl font-bold text-gray-900 dark:text-white my-6">Tomorrow</h2>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-background-light dark:bg-background-dark neumorphic-shadow flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">cast</span>
+</div>
+<div class="w-px flex-grow timeline-line"></div>
+</div>
+<div class="pb-6 w-full">
+<div class="bg-background-light dark:bg-background-dark p-4 rounded-xl neumorphic-shadow">
+<p class="font-bold text-lg text-gray-900 dark:text-white">Workshop Session</p>
+<p class="text-primary font-medium">10:00 AM - 11:30 AM</p>
+</div>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-background-light dark:bg-background-dark neumorphic-shadow flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">podium</span>
+</div>
+</div>
+<div class="w-full">
+<div class="bg-background-light dark:bg-background-dark p-4 rounded-xl neumorphic-shadow">
+<p class="font-bold text-lg text-gray-900 dark:text-white">Closing Remarks</p>
+<p class="text-primary font-medium">4:00 PM - 4:30 PM</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex justify-around items-center p-2 border-t border-gray-200 dark:border-gray-700">
+<a class="flex flex-col items-center gap-1 p-2 rounded-lg text-white bg-primary" href="#">
+<span class="material-symbols-outlined">event</span>
+<span class="text-xs font-medium">Agenda</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">confirmation_number</span>
+<span class="text-xs font-medium">My Ticket</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="text-xs font-medium">Feedback</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-xs font-medium">Profile</span>
+</a>
+</div>
+</footer>
+</div>
+
+</body></html>

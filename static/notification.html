@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Notifications</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                        "foreground-light": "#101922",
+                        "foreground-dark": "#f6f7f8",
+                        "subtle-light": "#e5e7eb",
+                        "subtle-dark": "#1f2937",
+                        "accent-green": "#10b981",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .neumorphic-shadow-light {
+            box-shadow: 6px 6px 12px #d5d6d8, -6px -6px 12px #ffffff;
+        }
+        .neumorphic-shadow-dark {
+            box-shadow: 6px 6px 12px #0c141a, -6px -6px 12px #141e2a;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex flex-col h-screen justify-between">
+<main class="flex-grow overflow-y-auto">
+<header class="sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm z-10 px-4 pt-6 pb-4">
+<div class="flex items-center justify-between">
+<button class="p-2 -ml-2">
+<svg class="w-6 h-6 text-foreground-light dark:text-foreground-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<h1 class="text-xl font-bold text-foreground-light dark:text-foreground-dark">Notifications</h1>
+<div class="w-6"></div>
+</div>
+</header>
+<div class="px-4 py-2 space-y-4">
+<div class="flex items-start gap-4 p-4 rounded-xl bg-background-light dark:bg-background-dark neumorphic-shadow-light dark:neumorphic-shadow-dark">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-accent-green/20 flex items-center justify-center">
+<svg class="w-6 h-6 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div class="flex-1">
+<p class="font-semibold text-foreground-light dark:text-foreground-dark">Vendor Confirmed</p>
+<p class="text-sm text-foreground-light/70 dark:text-foreground-dark/70">The vendor 'Creative Catering' has confirmed their participation.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-xl bg-background-light dark:bg-background-dark neumorphic-shadow-light dark:neumorphic-shadow-dark">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+<svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div class="flex-1">
+<p class="font-semibold text-foreground-light dark:text-foreground-dark">New Attendee Registered</p>
+<p class="text-sm text-foreground-light/70 dark:text-foreground-dark/70">Jane Doe has just registered for your event.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-xl bg-background-light dark:bg-background-dark neumorphic-shadow-light dark:neumorphic-shadow-dark">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
+<svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div class="flex-1">
+<p class="font-semibold text-foreground-light dark:text-foreground-dark">Event Update</p>
+<p class="text-sm text-foreground-light/70 dark:text-foreground-dark/70">The main stage schedule has been updated.</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-xl bg-background-light dark:bg-background-dark neumorphic-shadow-light dark:neumorphic-shadow-dark">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-accent-green/20 flex items-center justify-center">
+<svg class="w-6 h-6 text-accent-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div class="flex-1">
+<p class="font-semibold text-foreground-light dark:text-foreground-dark">Sponsor Payment Received</p>
+<p class="text-sm text-foreground-light/70 dark:text-foreground-dark/70">Payment from 'TechCorp' has been successfully processed.</p>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-background-light dark:bg-background-dark border-t border-subtle-light dark:border-subtle-dark px-4 py-2">
+<nav class="flex justify-around items-center">
+<a class="flex flex-col items-center gap-1 p-2 text-foreground-light/70 dark:text-foreground-dark/70" href="#">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-foreground-light/70 dark:text-foreground-dark/70" href="#">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.653-.124-1.28-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.653.124-1.28.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span class="text-xs font-medium">People</span>
+</a>
+<a class="relative flex flex-col items-center gap-1 p-2 text-primary" href="#">
+<div class="absolute -top-1 -right-1 w-2.5 h-2.5 bg-primary rounded-full"></div>
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a6 6 0 00-6 6v3.586l-1.707 1.707A1 1 0 003 15h14a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path></svg>
+<span class="text-xs font-medium">Alerts</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-foreground-light/70 dark:text-foreground-dark/70" href="#">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span class="text-xs font-medium">Stats</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-foreground-light/70 dark:text-foreground-dark/70" href="#">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span class="text-xs font-medium">Settings</span>
+</a>
+</nav>
+<div class="h-5"></div>
+</footer>
+</div>
+
+</body></html>
